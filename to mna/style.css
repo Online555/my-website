@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui;
+  background:
+    radial-gradient(1200px at 10% 10%, #eef2ff, transparent),
+    radial-gradient(1000px at 90% 30%, #fdf2f8, transparent),
+    #0b0f1a;
+  color: #e5e7eb;
+}
+
+header.top {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  background: linear-gradient(90deg, #818cf8, #f472b6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.tagline {
+  margin-top: 8px;
+  opacity: .6;
+}
+
+.hero {
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+}
+
+.product {
+  background: linear-gradient(180deg, #111827, #020617);
+  border-radius: 30px;
+  padding: 20px;
+  position: relative;
+  box-shadow:
+    0 30px 60px rgba(0,0,0,.8),
+    inset 0 0 0 1px rgba(255,255,255,.05);
+  transition: all .45s ease;
+}
+
+.product::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.08), transparent);
+  opacity: 0;
+  transition: .45s;
+}
+
+.product:hover::before {
+  opacity: 1;
+}
+
+.product:hover {
+  transform: translateY(-14px) scale(1.04);
+}
+
+.product img {
+  width: 100%;
+  height: 381px;
+  object-fit: cover;
+  border-radius: 22px;
+  filter: saturate(1.2) contrast(1.1);
+}
+
+.product h3 {
+  margin: 18px 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #818cf8, #f472b6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+button {
+  margin-top: 18px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  background: linear-gradient(90deg, #818cf8, #f472b6);
+  color: #020617;
+  box-shadow: 0 15px 35px rgba(129,140,248,.5);
+  transition: all .3s;
+}
+
+button:hover {
+  transform: scale(1.06);
+}
+
+button:disabled {
+  background: #374151;
+  color: #21a07a;
+  box-shadow: none;
+}
+
+footer {
+  padding: 50px;
+  text-align: center;
+  opacity: .4;
+}
